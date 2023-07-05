@@ -21,28 +21,35 @@ import {
 
 import './Editor.css';
 
+import Output from "../Output/Output.tsx";
+
 const Editor: FC = () => {
   return (
     <EditorComposer>
-      <EditorComponent hashtagsEnabled={true}>
-        <ToolbarPlugin defaultFontSize="20px">
-          <FontFamilyDropdown />
-          <FontSizeDropdown />
-          <Divider />
-          <BoldButton />
-          <ItalicButton />
-          <UnderlineButton />
-          <CodeFormatButton />
-          <InsertLinkButton />
-          <TextColorPicker />
-          <BackgroundColorPicker />
-          <TextFormatDropdown />
-          <Divider />
-          <InsertDropdown enablePoll={true} />
-          <Divider />
-          <AlignDropdown />
-        </ToolbarPlugin>
-      </EditorComponent>
+      <>
+        <div className="editor">
+          <EditorComponent hashtagsEnabled={true}>
+            <ToolbarPlugin defaultFontSize="20px">
+              <FontFamilyDropdown />
+              <FontSizeDropdown />
+              <Divider />
+              <BoldButton />
+              <ItalicButton />
+              <UnderlineButton />
+              <CodeFormatButton />
+              <InsertLinkButton />
+              <TextColorPicker />
+              <BackgroundColorPicker />
+              <TextFormatDropdown />
+              <Divider />
+              <InsertDropdown enablePoll={true} />
+              <Divider />
+              <AlignDropdown />
+            </ToolbarPlugin>
+          </EditorComponent>
+        </div>
+        <Output/>
+      </>
     </EditorComposer>
   );
 };
