@@ -21,7 +21,8 @@ import {
 
 import './Editor.css';
 
-import Output from "../Output/Output.tsx";
+// import Output from "../Output/Output.tsx";
+import TextValidationPlugin from "../TextValidationPlugin";
 
 const Editor: FC = () => {
   return (
@@ -48,7 +49,8 @@ const Editor: FC = () => {
             </ToolbarPlugin>
           </EditorComponent>
         </div>
-        <Output/>
+        {/*<Output/>*/}
+        <TextValidationPlugin/>
       </>
     </EditorComposer>
   );
